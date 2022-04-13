@@ -19,9 +19,15 @@ const myFunctions = require("./sample-functions.js");
 // });
 
 test("Testing sum -- success", () => {
-  const target = 30;
-  const result = myFunctions.sum(12, 18);
+  const target = 3;
+  const result = myFunctions.sum(1, 2);
   expect(result).toBe(target);
+});
+
+test("Testing sum -- fail", () => {
+  const target = 31;
+  const result = myFunctions.sum(12, 18);
+  expect(result).not.toBe(target);
 });
 
 test("all letters", () => {
@@ -29,31 +35,36 @@ test("all letters", () => {
   expect(result).toBeFalsy();
 });
 
-test("lettters and one number in the middle", () => {
+test("letters and one number in the middle", () => {
   const result = myFunctions.containsNumbers("as;l8dk");
   expect(result).toBeTruthy();
 });
 
-test("lettters and at least one whitespace", () => {
+test("letters and at least one whitespace", () => {
   const result = myFunctions.containsNumbers("as; dk");
   expect(result).toBeFalsy();
 });
 
-test("last number", () => {
-  const result = myFunctions.containsNumbers("as;ldk8");
-  expect(result).toBeTruthy();
-});
-// test.only('div by zero with infinity', ()=>{
-//     expect(myFunctions.div(23, 0)).toBe(Infinity);
+// test.only("div by zero with infinity", () => {
+//   expect(myFunctions.div(23, 0)).toBe(Infinity);
 // });
 
 test("div by zero with Error thrown", () => {
-  expect(() => myFunctions.div(23, 0)).toThrowError(/Div by zero/);
+  // "You must wrap the code in a function, otherwise the error will not be caught and the assertion will fail"
+  // not: expect(myFunctions.div(23, 0)).toThrowError(/Div by zero/);
+  // expect(() => myFunctions.div(23, 0)).toThrowError(/Div by zero/);
+  expect(() => {
+    myFunctions.div(23, 0);
+  }).toThrowError(/Div by zero/);
 });
 
-// test('Testing div by zero', () => {
-//     expect(myFunctions.div(10,0)).toBe(Infinity);
-// });
+test("test successful div", () => {
+  target = 4;
+  const result = myFunctions.div(24, 6);
+  expect(result).toBe(target);
+});
+
+// ?});
 
 // test('Testing div by zero', () => {
 //     expect(() => myFunctions.div(10,0)).toThrow(/Div by zero not supported/);

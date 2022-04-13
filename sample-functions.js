@@ -6,12 +6,13 @@ exports.div = function div(a, b) {
   if (b === 0) {
     throw new Error("Div by zero.");
   }
-  return a / b; //or just return this line and expect Infinity
+  return a / b; //or just return this line and expect .toBe(Infinity)
 };
 
 exports.containsNumbers = function containsNumbers(text) {
   for (let i = 0; i < text.length; i++) {
     if (!isNaN(text.charAt(i))) return true;
+    // if (!isNaN(text.charAt(i)) && text.charAt(i) !== " ") return true;
   }
   return false;
 };
