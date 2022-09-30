@@ -11,8 +11,7 @@ exports.div = function div(a, b) {
 
 exports.containsNumbers = function containsNumbers(text) {
   for (let i = 0; i < text.length; i++) {
-    // isNan treats a string with " " as a number (0)
-    // if (!isNaN(text.charAt(i))) return true;
+    if (!isNaN(text.charAt(i))) return true;
     // use parseInt so that it doesn't get converts to 0
     if (!isNaN(parseInt(text.charAt(i)))) return true;
   }
