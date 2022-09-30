@@ -45,7 +45,7 @@ test("letters and at least one whitespace", () => {
   expect(result).toBeFalsy();
 });
 
-// test.only("div by zero with infinity", () => {
+// test("div by zero with infinity", () => {
 //   expect(myFunctions.div(23, 0)).toBe(Infinity);
 // });
 
