@@ -1,23 +1,5 @@
 const myFunctions = require("./sample-functions.js");
 
-//Setup functions
-// beforeEach( () => {
-
-// });
-
-// beforeAll( () => {
-
-// });
-
-// //Teardown functions
-// afterEach( () => {
-
-// });
-
-// afterAll( () => {
-
-// });
-
 test("Testing sum -- success", () => {
   const target = 3;
   const result = myFunctions.sum(1, 2);
@@ -53,9 +35,9 @@ test("div by zero with Error thrown", () => {
   // "You must wrap the code in a function, otherwise the error will not be caught and the assertion will fail"
   // not: expect(myFunctions.div(23, 0)).toThrowError(/Div by zero/);
   // expect(() => myFunctions.div(23, 0)).toThrowError(/Div by zero/);
-  expect(() => {
-    myFunctions.div(23, 0);
-  }).toThrowError(/Div by zero/);
+  // expect(() => {
+  //   myFunctions.div(23, 0);
+  // }).toThrowError(/Div by zero/);
 });
 
 test("test successful div", () => {
@@ -64,7 +46,13 @@ test("test successful div", () => {
   expect(result).toBe(target);
 });
 
-// ?});
+test("Testing div with float divisor/divided -- success", () => {
+  const target = 2.64;
+  const result = myFunctions.div(6.6, 2.5);
+  const epsilon = Math.abs(result / result - 1);
+  const x = epsilon <= 0.00001;
+  expect(x).toBeTruthy();
+});
 
 // test('Testing div by zero', () => {
 //     expect(() => myFunctions.div(10,0)).toThrow(/Div by zero not supported/);

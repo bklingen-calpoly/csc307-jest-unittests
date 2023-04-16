@@ -9,6 +9,20 @@ exports.div = function div(a, b) {
   return a / b; //or just return this line and expect .toBe(Infinity)
 };
 
+exports.div = function div(a, b) {
+  if (b === 0) {
+    throw new Error("Div by zero.");
+  }
+  return a / b; //or just return this line and expect .toBe(Infinity)
+};
+
+exports.div = function div(a, b) {
+  if (b === 0) {
+    throw new Error("Div by zero.");
+  }
+  return a / b; //or just return this line and expect .toBe(Infinity)
+};
+
 exports.containsNumbers = function containsNumbers(text) {
   for (let i = 0; i < text.length; i++) {
     // isNan treats a string with " " as a number (0)
