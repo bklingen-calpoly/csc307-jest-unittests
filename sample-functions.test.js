@@ -31,14 +31,15 @@ test("letters and at least one whitespace", () => {
 //   expect(myFunctions.div(23, 0)).toBe(Infinity);
 // });
 
-test("div by zero with Error thrown", () => {
-  // "You must wrap the code in a function, otherwise the error will not be caught and the assertion will fail"
-  // not: expect(myFunctions.div(23, 0)).toThrowError(/Div by zero/);
-  // expect(() => myFunctions.div(23, 0)).toThrowError(/Div by zero/);
-  // expect(() => {
-  //   myFunctions.div(23, 0);
-  // }).toThrowError(/Div by zero/);
-});
+// "You must wrap the code in a function, otherwise the error will not be caught and the assertion will fail";
+// not: expect(myFunctions.div(23, 0)).toThrowError(/Div by zero/);
+// expect(() => myFunctions.div(23, 0)).toThrowError(/Div by zero/);
+
+// test("div by zero with Error thrown", () => {
+//   expect(() => {
+//     myFunctions.div(23, 0);
+//   }).toThrowError(/Div by zero/);
+// });
 
 test("test successful div", () => {
   target = 4;
