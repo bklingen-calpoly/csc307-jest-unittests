@@ -1,10 +1,10 @@
-function sum(a, b) {
+function mySum(a, b) {
   return a + b;
 }
 
-exports.div = function div(a, b) {
+exports.myDiv = function myDiv(a, b) {
   if (b === 0) {
-    throw new Error("Div by zero.");
+    throw new Error("myDiv by zero.");
   }
   return a / b; //or just return this line and expect .toBe(Infinity)
 };
@@ -20,6 +20,6 @@ exports.containsNumbers = function containsNumbers(text) {
 };
 
 //Also, note different ways to export functions.
-exports.sum = sum;
-// exports.div = div;
+exports.mySum = mySum;
+// exports.myDiv = myDiv;
 // exports.containsNumbers = containsNumbers;
