@@ -1,7 +1,7 @@
 const myFunctions = require("./sample-functions.js");
 
-test("Testing sum -- success", () => {
-  const target = 30;
-  const result = myFunctions.sum(12, 18);
-  expect(target).toBe(result);
+test("Testing mySum -- success", () => {
+  const expected = 30;
+  const result = myFunctions.mySum(12, 18);
+  expect(expected).toBe(result);
 });

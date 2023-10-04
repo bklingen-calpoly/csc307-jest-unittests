@@ -1,5 +1,5 @@
-function sum(a, b) {
+function mySum(a, b) {
   return a + b;
 }
 
-exports.sum = sum;
+exports.mySum = mySum;
