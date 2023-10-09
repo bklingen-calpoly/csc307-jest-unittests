@@ -2,7 +2,7 @@
   "name": "csc307-jest-unittests",
   "version": "1.0.0",
   "description": "sample functions and code for jest unit test demo",
-  "main": "index.js",
+  "main": "sample-functions.js",
   "type": "module",
   "scripts": {
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
@@ -13,5 +13,8 @@
   "dependencies": {
     "cross-env": "^7.0.3",
     "jest": "^27.4.5"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
