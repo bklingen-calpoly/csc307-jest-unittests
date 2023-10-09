@@ -59,7 +59,7 @@ test("div by zero with Error thrown", () => {
 });
 
 test("test successful div", () => {
-  target = 4;
+  const target = 4;
   const result = myFunctions.myDiv(24, 6);
   expect(result).toBe(target);
 });
