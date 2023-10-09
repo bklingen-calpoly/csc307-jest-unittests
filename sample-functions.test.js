@@ -1,4 +1,4 @@
-const myFunctions = require("./sample-functions.js");
+import myFunctions from "./sample-functions";
 
 test("Testing mySum -- success", () => {
   const expected = 3;
@@ -41,8 +41,8 @@ test("letters and at least one whitespace", () => {
 //   }).toThrowError(/myDiv by zero/);
 // });
 
-test("test successful myDiv", () => {
-  expected = 4;
+test("Testing successful myDiv", () => {
+  const expected = 4;
   const result = myFunctions.myDiv(24, 6);
   expect(result).toBe(expected);
 });
@@ -53,6 +53,15 @@ test("Testing myDiv with float myDivisor/myDivided -- success", () => {
   const epsilon = Math.abs(result / result - 1);
   const x = epsilon <= 0.00001;
   expect(x).toBeTruthy();
+});
+
+test("Testing div by zero with Error thrown", () => {
+  // "You must wrap the code in a function, otherwise the error will not be caught and the assertion will fail"
+  // not: expect(myFunctions.div(23, 0)).toThrowError(/Div by zero/);
+  // expect(() => myFunctions.div(23, 0)).toThrowError(/Div by zero/);
+  expect(() => {
+    myFunctions.myDiv(23, 0);
+  }).toThrowError(/Div by zero/);
 });
 
 // test('Testing myDiv by zero', () => {
