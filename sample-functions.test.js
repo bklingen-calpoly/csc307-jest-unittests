@@ -1,4 +1,4 @@
-const myFunctions = require("./sample-functions.js");
+import myFunctions from "./sample-functions";
 
 //Setup functions
 // beforeEach( () => {
@@ -20,13 +20,13 @@ const myFunctions = require("./sample-functions.js");
 
 test("Testing sum -- success", () => {
   const target = 3;
-  const result = myFunctions.sum(1, 2);
+  const result = myFunctions.mySum(1, 2);
   expect(result).toBe(target);
 });
 
 test("Testing sum -- fail", () => {
   const target = 31;
-  const result = myFunctions.sum(12, 18);
+  const result = myFunctions.mySum(12, 18);
   expect(result).not.toBe(target);
 });
 
@@ -54,13 +54,13 @@ test("div by zero with Error thrown", () => {
   // not: expect(myFunctions.div(23, 0)).toThrowError(/Div by zero/);
   // expect(() => myFunctions.div(23, 0)).toThrowError(/Div by zero/);
   expect(() => {
-    myFunctions.div(23, 0);
+    myFunctions.myDiv(23, 0);
   }).toThrowError(/Div by zero/);
 });
 
 test("test successful div", () => {
   target = 4;
-  const result = myFunctions.div(24, 6);
+  const result = myFunctions.myDiv(24, 6);
   expect(result).toBe(target);
 });
 
