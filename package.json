@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "sample functions and code for jest unit test demo",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "jest",
-    "coverage": "jest --collectCoverage"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "coverage": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --collectCoverage"
   },
   "author": "BJ Klingenberg",
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "jest": "^27.4.5"
   }
 }

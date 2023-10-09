@@ -1,4 +1,4 @@
-const myFunctions = require("./sample-functions.js");
+import myFunctions from "./sample-functions";
 
 test("Testing mySum -- success", () => {
   const expected = 30;
