@@ -5,8 +5,8 @@
   "main": "sample-functions.js",
   "type": "module",
   "scripts": {
-    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
-    "coverage": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --collectCoverage"
+    "test": "jest",
+    "coverage": "jest --collectCoverage"
   },
   "author": "BJ Klingenberg",
   "license": "ISC",

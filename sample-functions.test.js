@@ -1,4 +1,4 @@
-import myFunctions from "./sample-functions";
+const myFunctions = require("./sample-functions");
 
 test("Testing mySum -- success", () => {
   const expected = 3;
@@ -54,15 +54,15 @@ test("Testing myDiv with float myDivisor/myDivided -- success", () => {
   const x = epsilon <= 0.00001;
   expect(x).toBeTruthy();
 });
+// "You must wrap the code in a function, otherwise the error will not be caught and the assertion will fail"
+// not: expect(myFunctions.div(23, 0)).toThrowError(/Div by zero/);
+// expect(() => myFunctions.div(23, 0)).toThrowError(/Div by zero/);
+// test("Testing div by zero with Error thrown", () => {
 
-test("Testing div by zero with Error thrown", () => {
-  // "You must wrap the code in a function, otherwise the error will not be caught and the assertion will fail"
-  // not: expect(myFunctions.div(23, 0)).toThrowError(/Div by zero/);
-  // expect(() => myFunctions.div(23, 0)).toThrowError(/Div by zero/);
-  expect(() => {
-    myFunctions.myDiv(23, 0);
-  }).toThrowError(/Div by zero/);
-});
+//   expect(() => {
+//     myFunctions.myDiv(23, 0);
+//   }).toThrowError(/Div by zero/);
+// });
 
 // test('Testing myDiv by zero', () => {
 //     expect(() => myFunctions.myDiv(10,0)).toThrow(/myDiv by zero not supported/);

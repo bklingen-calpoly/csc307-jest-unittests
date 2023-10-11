@@ -18,4 +18,6 @@ function containsNumbers(text) {
   return false;
 }
 
-export default { mySum, myDiv, containsNumbers };
+exports.mySum = mySum;
+exports.myDiv = myDiv;
+exports.containsNumbers = containsNumbers;
